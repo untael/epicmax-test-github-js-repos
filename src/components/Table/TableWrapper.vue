@@ -30,7 +30,7 @@
       </tbody>
       <observer @intersect="$emit('loadNext')"/>
     </table>
-    <div class="table-wrapper__no-data" v-else>
+    <div class="table-wrapper__no-data" v-if="!rows.length && !loading">
       Nothing to display :(
     </div>
   </div>
